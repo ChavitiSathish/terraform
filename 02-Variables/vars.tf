@@ -53,10 +53,38 @@ output "DatatypeOutputs" {
   value = "String : ${var.string}, Number : ${var.number}, Boolean : ${var.boolean}"
 }
 
+//Creating List and Map Variables
+
+variable "Training" {
+  default = "Devops"
+}
+
 variable "Trainings" {
   default = ["Devops", "Terraform", "AWS", "Ansible"]
 }
 
-output "Traininglist" {
+variable "TrainingDetails" {
+  default = {
+    Devops = "5 A.M"
+    Terraform = "6 A.M"
+    AWS = "7 A.M"
+    Ansible = "8 A.M"
+  }
+}
+
+output "FirstTraining" {
   value = var.Trainings[0]
 }
+
+output "SecondTraining" {
+  value = var.Trainings[1]
+}
+
+output "FourthTraining" {
+  value = var.Trainings[3]
+}
+
+output "TrainingTimings" {
+  value = "Aws-Timings : ${var.TrainingDetails(AWS)}, Devops-Timings : ${var.TrainingDetails(Devops)}"
+}
+
