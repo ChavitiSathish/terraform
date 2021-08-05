@@ -14,6 +14,7 @@ output "Output2" {
 //Here Input will be asked at terminal end
 
 variable "sample2" {}
+
 output "output" {
-  value = "var.sample2"
+  value = var.sample2
 }
