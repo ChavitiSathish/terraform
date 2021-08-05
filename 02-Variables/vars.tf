@@ -88,3 +88,7 @@ output "TrainingTimings" {
   value = "Aws-Timings : ${var.TrainingDetails["AWS"]}"
 }
 
+output "AllTrainings" {
+  value = var.Trainings
+}
+
