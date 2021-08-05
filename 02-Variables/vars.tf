@@ -6,6 +6,6 @@ variable "sample2" {
   default = "Sathish"
 }
 
-output "sample" {
+output "Output" {
   value = var.sample2
 }
