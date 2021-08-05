@@ -1,7 +1,7 @@
-output "Sathish" {
+output "Out1" {
   value = "Hello World"
 }
 
-output "out2" {
-  value = "This is a Pracrtice"
+output "Out2" {
+  value = "This is a Practice"
 }
