@@ -14,6 +14,6 @@ output "Output2" {
 //Here Input will be asked at terminal end
 
 variable "sample2" {}
-output "sample2output" {
+output "output" {
   value = "var.sample2"
 }
