@@ -96,6 +96,8 @@ output "AllTrainings" {
 //Accessing the ouput value from different sources
 //Variables.tfvars method
 
+variable "Fruits" {}
+
 output "FruitsOutput" {
   value = var.Fruits
 }
