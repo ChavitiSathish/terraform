@@ -18,3 +18,33 @@ variable "sample2" {}
 output "output" {
   value = var.sample2
 }
+
+
+//Data Types in Terraform
+
+# String Data type
+variable "string" {
+  default = "HELLO World"
+}
+
+output "Stringoutput" {
+  value = var.string
+}
+
+# Number Data Type
+variable "number" {
+  default = "10"
+}
+
+output "Numberoutput" {
+  value = var.number
+}
+
+#Boolean Data Type
+variable "boolean" {
+  default = "true"
+}
+
+output "Booleanoutput" {
+  value = "var.boolean"
+}
