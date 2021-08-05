@@ -1,11 +1,11 @@
 variable "sample" {
-  default = Helloworld
+  default = "Helloworld"
 }
 
 variable "sample2" {
-  default = Sathish
+  default = "Sathish"
 }
 
-output "Output" {
+output Output {
   value = var.sample2
 }
