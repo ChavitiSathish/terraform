@@ -46,5 +46,5 @@ variable "boolean" {
 }
 
 output "Booleanoutput" {
-  value = "var.boolean"
+  value = var.boolean
 }
