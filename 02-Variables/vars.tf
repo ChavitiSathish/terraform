@@ -49,7 +49,14 @@ output "Booleanoutput" {
   value = var.boolean
 }
 
-
 output "DatatypeOutputs" {
   value = "String : ${var.string}, Number : ${var.number}, Boolean : ${var.boolean}"
+}
+
+variable "Trainings" {
+  default = ["Devops", "Terraform", "AWS", "Ansible"]
+}
+
+output "Traininglist" {
+  value = var.Trainings[0]
 }
