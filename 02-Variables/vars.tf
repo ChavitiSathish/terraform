@@ -48,3 +48,8 @@ variable "boolean" {
 output "Booleanoutput" {
   value = var.boolean
 }
+
+
+output "DatatypeOutputs" {
+  value = "String : ${var.string}, Number : ${var.number}, Boolean : ${var.boolean}"
+}
