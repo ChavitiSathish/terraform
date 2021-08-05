@@ -85,6 +85,6 @@ output "FourthTraining" {
 }
 
 output "TrainingTimings" {
-  value = "Aws-Timings : ${var.TrainingDetails[AWS]}"
+  value = "Aws-Timings : ${var.TrainingDetails["AWS"]}"
 }
 
