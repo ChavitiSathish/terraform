@@ -11,6 +11,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   }
 }
 
+
 resource "aws_ec2_tag" "name-tag" {
   count                     = local.LENGTH
   resource_id               = element(aws_spot_instance_request.cheap_worker.*.spot_instance_id, count.index)
@@ -28,7 +29,7 @@ resource "null_resource" "run-shell-scripting" {
     }
     inline = [
       "cd /home/centos",
-      "git clone https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps57/_git/shell-scripting",
+      "git clone https://github.com/ChavitiSathish/shellscripting.git",
       "cd shell-scripting/roboshop",
       "git pull",
       "sudo make ${element(var.COMPONENTS, count.index)}"
