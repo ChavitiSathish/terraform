@@ -18,8 +18,22 @@ resource "aws_ec2_tag" "name-tag" {
   value                     = element(var.COMPONENTS, count.index)
 }
 
-output "attributes" {
-  value = aws_spot_instance_request.cheap_worker.*.spot_instance_id
+resource "null_resource" "run-shell-scripting" {
+  count                     = local.LENGTH
+  provisioner "remote-exec" {
+    connection {
+      host                  = element(aws_spot_instance_request.cheap_worker.*.public_ip, count.index)
+      user                  = "centos"
+      password              = "DevOps321"
+    }
+    inline = [
+      "cd /home/centos",
+      "git clone https://github.com/ChavitiSathish/shellscripting.git",
+      "cd shell-scripting/roboshop",
+      "git pull",
+      "sudo make ${element(var.COMPONENTS, count.index)}"
+    ]
+  }
 }
 
 locals {
